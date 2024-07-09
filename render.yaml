@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: Instagram-Bot
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: |
+      sudo apt-get update && sudo apt-get install -y ntpdate &&
+      sudo ntpdate -s time.nist.gov &&
+      python3 /opt/render/project/src/main.py
