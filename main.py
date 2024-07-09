@@ -1,3 +1,4 @@
+import asyncio
 from pyrogram.raw import functions, types
 from pyrogram import Client, idle
 from pyromod import listen
@@ -25,5 +26,4 @@ async def main():
     await bot.stop()
 
 if __name__ == "__main__":
-    import asyncio
     asyncio.run(main())
