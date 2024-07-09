@@ -1,9 +1,10 @@
 services:
   - type: web
-    name: Instagram-Bot
+    name: Instagram-Bot  # Replace with your actual service name
     env: python
     buildCommand: "pip install -r requirements.txt"
     startCommand: |
       sudo apt-get update && sudo apt-get install -y ntpdate &&
       sudo ntpdate -s time.nist.gov &&
-      python3 /opt/render/project/src/main.py
+      date &&  # This will print the current system time to the logs
+      python3 main.py
